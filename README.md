@@ -1,4 +1,4 @@
-#local STT + diarization POC
+local STT + diarization POC
 
 Local, offline transcription (Sinhala / Tamil / English) with session-
 stable "Speaker 1 / Speaker 2 / ..." labels, using faster-whisper
