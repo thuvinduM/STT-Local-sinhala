@@ -42,7 +42,7 @@ WHISPER_COMPUTE_TYPE = os.environ.get("WHISPER_COMPUTE_TYPE", "float16")
 WHISPER_MODEL_DIR = os.environ.get("WHISPER_MODEL_DIR") or None
 
 # --- VAD / segmentation config ---
-VAD_AGGRESSIVENESS = int(os.environ.get("VAD_AGGRESSIVENESS", "2"))
+VAD_THRESHOLD = float(os.environ.get("VAD_THRESHOLD", "0.5"))
 VAD_PADDING_MS = int(os.environ.get("VAD_PADDING_MS", "300"))
 VAD_TRIGGER_RATIO = float(os.environ.get("VAD_TRIGGER_RATIO", "0.9"))
 VAD_MIN_SEGMENT_MS = int(os.environ.get("VAD_MIN_SEGMENT_MS", "600"))
@@ -136,7 +136,7 @@ async def download_json():
 
 def _new_segmenter() -> Segmenter:
     return Segmenter(
-        vad_aggressiveness=VAD_AGGRESSIVENESS,
+        vad_threshold=VAD_THRESHOLD,
         padding_ms=VAD_PADDING_MS,
         trigger_ratio=VAD_TRIGGER_RATIO,
         min_segment_ms=VAD_MIN_SEGMENT_MS,
