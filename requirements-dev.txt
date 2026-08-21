@@ -1,0 +1,2 @@
+# Optional - only needed to run the test suite (tests/), not to run the app.
+pytest==8.3.3

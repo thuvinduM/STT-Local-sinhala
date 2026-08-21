@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local STT</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>LOCAL STT</h1>
+
+
+
+    <div class="controls">
+      <label for="langSelect" style="margin-right:8px;">Language:</label>
+      <select id="langSelect">
+        <option value="si">Sinhala</option>
+        <option value="ta">Tamil</option>
+        <option value="en">English</option>
+        <option value="auto">Auto-detect (not recommended for si/ta)</option>
+      </select>
+      <button id="startBtn">START</button>
+      <button id="stopBtn" disabled>STOP</button>
+    </div>
+
+    <div class="status-bar">
+      <span>Status: <span id="status">Ready</span></span>
+      <span>Recording: <span id="timer">00:00:00</span></span>
+    </div>
+
+    <div id="errorBox" class="error-box" hidden></div>
+
+    <h2>TRANSCRIPT</h2>
+    <div id="transcript" class="transcript"></div>
+
+    <div class="controls">
+      <button id="downloadTxtBtn" disabled>DOWNLOAD TXT</button>
+      <button id="downloadJsonBtn" disabled>DOWNLOAD JSON</button>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

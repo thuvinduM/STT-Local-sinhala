@@ -1,0 +1,19 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+faster-whisper==1.0.3
+webrtcvad==2.0.10
+numpy==1.26.4
+
+# Primary speaker-embedding backend (mature, non-gated ECAPA-TDNN model -
+# the same embedding quality pyannote.audio itself relies on).
+speechbrain==1.0.0
+
+# Fallback speaker-embedding backend, used automatically only if
+# speechbrain fails to load (see app/diarization.py).
+resemblyzer==0.1.4
+
+# GPU runtime libraries used by faster-whisper (ctranslate2 backend).
+# These are pip packages installed *inside this project's venv only* -
+# they do NOT touch your system CUDA/driver installation.
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cudnn-cu12==9.1.0.70

@@ -1,0 +1,23 @@
+.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+*.log
+
+# ML models
+models/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+.cache/
